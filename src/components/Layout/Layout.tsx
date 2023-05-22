@@ -7,7 +7,7 @@ interface LayoutProps {
 const Layout: FC<LayoutProps> = (props) => {
     const { children } = props;
     return <>
-        <main className="min-h-screen">
+        <main className="bg-primary-gradient min-h-screen">
             {children}
         </main>
     </>
