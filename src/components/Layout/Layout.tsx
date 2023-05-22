@@ -1,5 +1,6 @@
 import { FC, ReactNode } from "react"
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 interface LayoutProps {
     children: ReactNode
@@ -12,6 +13,7 @@ const Layout: FC<LayoutProps> = (props) => {
         <main className="bg-primary-gradient min-h-screen">
             {children}
         </main>
+        <Footer />
     </>
 }
 
