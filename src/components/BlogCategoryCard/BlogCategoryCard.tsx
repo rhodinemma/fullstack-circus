@@ -16,7 +16,7 @@ const BlogCategoryCard: FC<BlogCategoryCardProps> = (props) => {
             <div className={blogCategoryCardClassNames.categoryCard}>
                 <Image width={200} height={200} className={blogCategoryCardClassNames.categoryImage} src={image} alt={name} />
                 <h3 className={blogCategoryCardClassNames.categoryName}>{name}</h3>
-                <p className={blogCategoryCardClassNames.categoryDescription}>{description.slice(0,100)}...</p>
+                <p className={blogCategoryCardClassNames.categoryDescription}>{description.slice(0, 70)}...</p>
             </div>
         </Link>
     </>

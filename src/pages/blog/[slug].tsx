@@ -1,3 +1,4 @@
+import BlogCategoryCard from "@/components/BlogCategoryCard/BlogCategoryCard";
 import Image from "next/image";
 
 const BlogItem = () => {
@@ -35,6 +36,25 @@ const BlogItem = () => {
                     </p>
                 </div>
             </div>
+
+            <div className="max-w-screen-xl text-white text-center mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
+                <h3 className="font-bold text-5xl mb-10">More Reads</h3>
+                <p className="">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+            <div className="px-6 pb-44 max-w-7xl mx-auto lg:px-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                {blogCategories.map((blogCategory) => (
+                    <BlogCategoryCard
+                        key={blogCategory.name}
+                        slug={blogCategory.name}
+                        description={blogCategory.description}
+                        image={blogCategory.image}
+                        name={blogCategory.name}
+                    />
+                ))}
+            </div>
         </>
     )
 }
@@ -55,7 +75,7 @@ const classNames = {
         "flex-shrink-0 object-cover h-8 md:h-10 w-8 md:w-10 rounded-full",
     authorName: "ml-2 md:ml-3 text-sm md:text-xl font-medium text-white",
     blogContentWrapper:
-        "flex flex-col justify-between max-w-7xl mx-auto mt-12 py-12 px-4 sm:px-6 lg:flex-row lg:px-8",
+        "flex flex-col justify-between max-w-7xl mx-auto mt-12 py-20 px-4 sm:px-6 lg:flex-row lg:px-8",
     blogImageWrapper: "w-full lg:w-1/3",
     blogImage:
         "w-full h-full object-cover rounded-lg hover:translate-y-2 transition-all duration-500",
